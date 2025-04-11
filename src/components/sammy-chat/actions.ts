@@ -33,9 +33,9 @@ export async function generateToken(
       org_id: process.env.ORG_ID || "00000000-0000-0000-0000-000000000000",
       user_data: {
         user_id: process.env.USER_ID || "00000000-0000-0000-0000-000000000001",
-        first_name: "Demo",
+        first_name: "Demo Outbuild",
         last_name: "User",
-        email: "demo@example.com",
+        email: "demo@outbuild.com",
       },
     };
 
