@@ -73,7 +73,7 @@ export default function Chat() {
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [baseUrl]);
 
   // Fetch token on component mount
   useEffect(() => {
@@ -155,6 +155,14 @@ export default function Chat() {
           </div>
         </div>
       </div>
+
+      {loading && <div className="fixed inset-0 flex items-center justify-center bg-white/50 dark:bg-gray-900/50 z-40">Loading...</div>}
+      
+      {error && !loading && (
+        <div className="fixed top-4 right-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded z-50">
+          {error}
+        </div>
+      )}
 
       <Sammy {...SammyProviderProps} />
     </div>

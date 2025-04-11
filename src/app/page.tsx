@@ -2,6 +2,7 @@
 import Chat from "@/components/sammy-chat/chat";
 import { useState } from "react";
 import { FormEvent } from "react";
+import Image from "next/image";
 import "./outbuild.css";
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
       <div className="outbuild-bg">
         <div className="login-card">
           <div className="flex justify-center mb-8">
-            <img src="/images/outbuild-logo.svg" alt="Outbuild Logo" className="h-10" />
+            <Image src="/images/outbuild-logo.svg" alt="Outbuild Logo" width={120} height={40} className="h-10" />
           </div>
 
           <form className="login-form" onSubmit={handleSubmit}>
@@ -65,7 +66,7 @@ export default function Home() {
             </div>
 
             <div className="signup-text">
-              <span>Don't have an account yet? <a href="/signup" className="signup-link">Sign up</a></span>
+              <span>Don&apos;t have an account yet? <a href="/signup" className="signup-link">Sign up</a></span>
             </div>
 
             <div className="divider">
@@ -74,12 +75,11 @@ export default function Home() {
 
             <div className="procore-btn">
               <div className="procore-icon">
-                <img
+                <Image
                   src="/images/procore-icon.svg"
                   alt="Procore icon"
-                  width="16"
-                  height="17"
-                  style={{ width: '16px', height: '17px' }}
+                  width={16}
+                  height={17}
                 />
               </div>
               <span>Sign in with PROCORE</span>
